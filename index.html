@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head profile="http://www.w3.org/2005/10/profile">
+<link rel="icon" type="image/ico" href="./favicon.ico">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Java: Home</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="./css/styles.css">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+
+<body>
+ 
+<div class="container">
+
+
+<div class="bs-example">
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <a href="./index.html" class="navbar-brand">
+            <img src="./images/my-logo.png" height="28" alt="java">
+        </a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav">
+                <a href="./docs/Oracle.pdf" class="nav-item nav-link">Hotter book</a>
+                <a href="./docs/cjv1.pdf" class="nav-item nav-link">Breeze book</a>
+            </div>
+        </div>
+    </nav>
+    <div class="top">
+    	<div class="left">
+    		<img src="./images/java.jpg" class="img-fluid" alt="Responsive image">
+    	</div>
+    	<div class="right">
+    		<img src="./images/3.jpg" class="img-fluid img-fluid-1" alt="image">
+    	</div>
+    </div>
+
+
+
+<div id="accordion">
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h5 class="mb-0">
+        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Brief introduction to OOP in java.
+        </button>
+      </h5>
+    </div>
+
+    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+      <div class="card-body">
+        Object Oriented Programming (OOP) is a programming model where programs are organized around <b><u>objects</u></b> and <b><u>data</u></b> rather than <u>action</u> and <u>logic.</u> OOP allows decomposition of a problem into a number of entities called <b><u>objects</u></b> and then builds <b><u>data</u></b> and <b><u>functions</u></b> around these objects.
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingTwo">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Brief introduction to data structures and algorithms.
+        </button>
+      </h5>
+    </div>
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+      <div class="card-body">
+        A data structure is a special way of <b><u>organizing</u></b> and <b><u>storing</u></b> data in a computer so that it can be used <mark>efficiently.</mark> <u>Array, LinkedList, Stack, Queue, Tree, Graph etc</u> are all data structures that stores the data in a special way so that we can access and use the data efficiently. 
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingThree">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Solutions? OH! YEAH... all of 'em..
+        </button>
+      </h5>
+    </div>
+    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+      <div class="card-body">
+        Najua kwasasa kila mtu yupo bize kujiandaa na UE, lakini hakuna kitu kinachopoteza mda kama kutafta solution ya swali flani kwenye ishu ya programming ... Nmechagua kutoa solutions za java tu sababu ndo seemu ambayo ni kiini cha ii kozi yetu.. So usipoteze mda, cheki solutions and zsome uzielewe...... (Ni solutions za maswali yaliomo kwe slides za ticha).
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+ <div class="card-group">
+ 		<div class="card">
+    <img src="./images/oop.jpeg" class="card-img-top" alt="oop">
+    <div class="card-body">
+      <h5 class="card-title"><a href="./oop/oop.html">Object Oriented Orogramming in java</a></h5>
+      <p class="card-text">In this revision section, You gonna get everything needed for you to become confident in OOP exams...</p>
+    </div>
+  </div>
+  	<div class="card">
+    <img src="./images/ds.jpeg" class="card-img-top" alt="data">
+    <div class="card-body">
+      <h5 class="card-title"><a href="./DataS/dsal.html">Data structures and algorithms in java</a></h5>
+      <p class="card-text">Get the most concepts from leading universities in the world, like cambridge etc. and become a pro...</p>
+    </div>
+  </div>
+  	<div class="card">
+    <img src="./images/solns.jpg" class="card-img-top" alt="solutions">
+    <div class="card-body">
+      <h5 class="card-title"><a href="./Solns/solns.html">Cheat sheet (Solutions, tips and tricks).</a></h5>
+      <p class="card-text">Here you will find all the solutions for the class lecture slides exercises! don' biliv? dive in and see...</p>
+    </div>
+  </div>
+  
+</div>
+ 
+
+
+
+
+	<h2 style="text-align: center; color: white; font-family: Serif" class="h2">Check this before going anywhere..</h2>
+	<!-- 16:9 aspect ratio --> 
+<div class="embed-responsive embed-responsive-16by9"> 
+    <iframe width="560" height="315" src="./video/video.mp4" 
+frameborder="0" allowfullscreen></iframe>
+</div>
+  <h2 style="background-color: black; color: white; padding: 5px; margin: 5px; text-align: center;">Java philosophy..</h2>
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+
+      <div class="item active">
+        <img src="./images/r1.jpeg" alt="Portable" style="width:100%;">
+        <div class="carousel-caption">
+          <h3>Portable</h3>
+          <p class="p">Hii inamanisha ukiandika program ya java kwa kutumia linux, pia itaweza kutumika kwenye OS zingine kama windows, mac etc.</p>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="./images/r2.jpeg" alt="Easy" style="width:100%;">
+        <div class="carousel-caption">
+          <h3>Easy</h3>
+          <p class="p">Ndio! java ni rahisi sana kuisoma na kuimasta ndani ya muda mfupi, tofauti na lugha zingne za chini kam C++, C, ASSEMBLY etc.</p>
+        </div>
+      </div>
+    
+      <div class="item">
+        <img src="./images/r3.jpeg" alt="Robust" style="width:100%;">
+        <div class="carousel-caption">
+          <h3>Robust</h3>
+          <p class="p">What? .. ofcourse, Hauhitaji kuanza kuhangaika kumanage matumizi ya memory, Java inakufanyia kila kitu, maisha ya java ni bata tu. garbage collector in virtual machine (JVM) will do the dirtiest work for you.!..</p>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="./images/oop.jpeg" alt="oop" style="width:100%;">
+        <div class="carousel-caption">
+          <h3>OOP</h3>
+          <p class="p">Java ni pure object oriented programming language, huezi fanya chochote kwenye java kama ujaelewa classes and objects</p>
+        </div>
+      </div>
+  
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+
+
+
+
+
+<!-- Footer -->
+<footer class="page-footer font-small mdb-color lighten-3 pt-4">
+
+  <!-- Footer Links -->
+  <div class="container text-center text-md-left">
+
+    <!-- Grid row -->
+    <div class="row">
+
+      <!-- Grid column -->
+      <div class="col-md-4 col-lg-3 mr-auto my-md-4 my-0 mt-4 mb-1">
+
+        <!-- Content -->
+        <h5 class="font-weight-bold text-uppercase mb-4">BEST WISHES IN YOUR EXAMS</h5>
+        <p>Be smart and study smart, plan your schedule and make everything clear. No time to waste.</p>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-2 col-lg-2 mx-auto my-md-4 my-0 mt-4 mb-1">
+
+        <!-- Links -->
+        <h5 class="font-weight-bold text-uppercase mb-4">About</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <p>
+              <a href="./projects/project.html">PROJECTS</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              <a href="./about/about.html">ABOUT ME</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              <a href="./blog/blog.html">THIS BLOG</a>
+            </p>
+          </li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-4 col-lg-3 mx-auto my-md-4 my-0 mt-4 mb-1">
+
+        <!-- Contact details -->
+        <h5 class="font-weight-bold text-uppercase mb-4">Address</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <p>
+              <i class="fas fa-home mr-3"></i>RUAHA CATHOLIC UNIVERSITY, IRINGA.</p>
+          </li>
+          <li>
+            <p>
+              <i class="fas fa-envelope mr-3"></i> mhechelamb@gmail.com</p>
+          </li>
+          <li>
+            <p>
+              <i class="fas fa-phone mr-3"></i> 0754 674 044</p>
+          </li>
+          <li>
+            <p>
+              <i class="fas fa-print mr-3"></i> 0786 374 XXX</p>
+          </li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+  </div>
+  <!-- Footer Links -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2020 Copyright:
+    <a href="https://mdbootstrap.com/"> <img src="./images/my-logo.png" height="28" alt="java"></a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+</body>
+</html>

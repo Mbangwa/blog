@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head profile="http://www.w3.org/2005/10/profile">
+<link rel="icon" type="image/ico" href="./favicon.ico">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Java: Solutions</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="../css/oop/oop.css">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+
+<body>
+ 
+<div class="container">
+
+
+<div class="bs-example">
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <a href="../index.html" class="navbar-brand">
+            <img src="../images/my-logo.png" height="28" alt="java">
+        </a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav">
+                <a href="../docs/Oracle.pdf" class="nav-item nav-link">Hotter book</a>
+                <a href="../docs/cjv1.pdf" class="nav-item nav-link">Breeze book</a>
+            </div>
+        </div>
+    </nav>
+
+</div>
+<div class="card">
+<p class="m">Lecture 4 slide, questions and answers</p>
+
+<p class="para">
+    1.Write the class Box that has instance variables length, width, and height and for each variable define accessors and mutators. The class also has method for computing volume of a box and surface area (assume the box is closed).
+</p>
+
+<p>
+    Answer:
+</p>
+
+<code>
+<br>
+// written by mbagwa.<br><br>
+
+
+public class Box {<br><br>
+    private int length;<br>
+    private int width;<br>
+    private int height;<br><br>
+    
+    //accessor and mutators<br><br>
+    
+    public void setLength(int length) {<br>
+        this.length = length;<br>
+    }<br><br>
+    
+    public void setHeight(int height) {<br>
+        this.height = height;<br>
+    }<br><br>
+    
+    public void setWidth(int width) {<br>
+        this.width = width;<br>
+    }<br><br>
+    
+    public int getLength() {<br>
+        return length;<br>
+    }<br><br>
+    
+    public int getWidth() {<br>
+        return width;<br>
+    }<br><br>
+    
+    public int getHeight() {<br>
+        return height;<br>
+    }<br><br>
+    
+    
+    // constructor<br><br>
+    
+    
+    public Box(int h, int w, int l) {<br>
+        setHeight(h);<br>
+        setWidth(w);<br>
+        setLength(l);<br>
+    }<br><br>
+    
+    
+    //volume<br><br>
+    
+    public int volume() {<br>
+        return length * width * height;<br>
+    }<br><br>
+    
+    // surface area (SurfaceArea=2lw+2lh+2wh)<br><br>
+    public int surfaceArea() {<br>
+        return (2*length * width) + (2*length*height) + <br>(2*width*height); <br>
+    }<br>
+}<br><br>
+</code>
+
+</div>
+
+
+<div class="previous">
+    <a href="./l1.html"><< <span class="spn">Previous</span></a>
+</div>
+<div class="next">
+    <a href="./l3.html"><span class="spn">Next</span> >></a>
+</div>
+</div>
+</body>
+</html>

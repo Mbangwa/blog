@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Java: Looping.</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="../css/oop/oop.css">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+<div class="bs-example">
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <a href="../index.html" class="navbar-brand">
+            <img src="../images/my-logo.png" height="28" alt="java">
+        </a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav">
+                <a href="../docs/Oracle.pdf" class="nav-item nav-link">Hotter book</a>
+                <a href="../docs/cjv1.pdf" class="nav-item nav-link">Breeze book</a>
+            </div>
+        </div>
+    </nav>
+</div>
+
+
+
+
+<h2>
+        <strong style="color: rgba(0, 0, 100, 0.8);">... Flow control and looping</strong>
+    </h2>
+
+
+    <div class="card">
+        <p class="x">Looping constructs </p>
+        <p>Tuna constructs zingine kwa ajili ya looping.. </p>
+        <p>
+    Sometimes you may need to execute ur code several times basing on the condition....To do so we use loops. <br>
+    Loops are nothing but <mark>constructs which repeats the execution depending on a certain condition.</mark>
+</p>
+
+<p>
+    Take an example, You want to print numbers from 1 up to 1000000000. OH what? yes ... itachukua ata wiki zima ukisema uandike kwa mkono, but using loops, its a matter of just milliseconds!.
+</p>
+<p class="para">Lets have a look on them..</p>
+
+        <code>
+            <ol>
+                <li>"for" loop</li>
+                <li>foreach loop</li>
+                <li>while loop</li>
+                <li>do...while loop</li>
+            </ol>
+        </code>
+<p class="m">
+    "for" loop
+</p>
+
+<p>
+    <strong>for</strong> loop ua inarepeat kuexecute kulingana na condition. <br>Mfano: as long as age is less than 12, keep saying "hello".
+</p>
+
+<p class="para">Syntax</p>
+<p>
+    <code>
+        for (<i>initialization; conditiion; incrementation</i>){<br>
+
+        // statements <br>
+
+    }<br>
+    </code>
+
+    <strong>Output</strong><br>
+<code>
+    0 <br>
+    1 <br>
+    2 <br>
+    3 <br>
+    4 <br>
+    5 <br>
+    6 <br>
+    7 <br>
+    8 <br>
+    9 <br>
+    10 <br>
+
+</code>
+</p>
+
+<p>
+    <i>initialization</i> -> apa utainitialize variable ianzie kuesabu where, ianzie zero or ? ni wew tyu.<br>
+    <i>condition</i> -> apa ndo utaeka condition for repeatation. <br>
+    <i>incrementation</i> -> apa ndo utaiambia cmptr kua kila ikirepeat ijumlishe ngapi kwenye initilization. Otherwise, loop inakua <strong>infinite!</strong>
+</p>
+<p>
+    Example: <br>
+    "Printing numbers from 0 to 10" <br>
+    <code>
+        for(int i = 0; i <= 10; i++){ <br>
+System.out.println(i); <br>
+    }<br>
+    </code>
+</p>
+<p>
+    Tumeinitialize <code>int i = 0;</code>, means start counting from zero. <br>
+    Then tumeeka condition <code>i <= 10; </code>, means as long as 'i' is less than 10... <br>
+    Then tukaincrement variable 'i' <code>i++</code>, Incrementation (i++) means add one to 'i', ni sawa na i = i + 1;
+</p>
+<p> 
+In general tunasema, start from zero, repeat, then as long as 'i' is less or equal to ten, execute the body of the loop then increment 'i', repeat testing again until 'i' become greater than ten, the condition will false, and the loop will terminate and give control to other instructions.
+</p>
+
+<p class="m">"while" loop</p>
+
+<p>
+    While loop ni tofaut kdogo na <strong>for</strong> loop, tumeona <strong>for</strong> loop inaitaji vtu vtatu ndani ya (), but while loop inataka only condition, vtu vingine kama initialization na incrementation utavifanya nje ya ().
+</p>
+<p class="para">Syntax</p>
+<code>
+    while (condition){<br>
+//statements <br>
+}<br>
+</code>
+
+<strong>Mfano: </strong><br>
+<p>Counting numbers from 0 to 10 using while loop</p>
+
+<code>
+    int count = 0;<br>
+    while (count <= 10){<br>
+    System.out.println(count); <br>
+    count++; <br>
+}<br>
+</code>
+
+<strong>Output</strong><br>
+<code>
+    0 <br>
+    1 <br>
+    2 <br>
+    3 <br>
+    4 <br>
+    5 <br>
+    6 <br>
+    7 <br>
+    8 <br>
+    9 <br>
+    10 <br>
+
+</code>
+
+
+<p class="m">do ... while loop</p>
+<p>
+    do ... while  loop yenyew kwanza inafanya execution mara moja kabla ya kuangalia condition. Yani ata kama condition ni false itaexecute mara moja then inaterminate.
+</p>
+
+<p class="para"> Syntax</p>
+<code>
+    do {<br>
+    //statements<br>
+} while (condition); <br>
+</code>
+
+<p>Mfano:</p>
+<code>
+    double temperature = 37.5; <br>
+    do {<br>
+    System.out.println("This is temperature monitoring");<br>
+
+} while (temperature < 20); <br>
+</code>
+
+<p>
+    Ukicheki condition utaona kwamba ni false, temperature sio ndogo kulko 20, so inamanisha ingekua ni 'while loop' isingeexecute chochote, lakini do ... while loop itafanya execution mara moja then ndo itachek condition. 
+</p>
+
+<strong>Output: </strong><br>
+<code>
+    This is temperature monitoring <br>
+</code>
+
+<p>
+    Kama condition ingekua true, basi io loop ingekua infinite loop!
+</p>
+<p class="m">Enhaced for loop (foreach loop)</p>
+
+<p>
+    Hii loop haina complecation na ndo simplest looping mechanism..
+<br>
+Loop hii huanza kufanya execution kwanzia zero adi namba ya mwsho, na mara nyingi ua tunaitumia kuaccess elements za kwenye array or lists. Tutasoma array kwe data structure.. Now kama uelewi just calm down, programming is so easy..
+</p>
+
+<strong>Mfano:</strong> <br>
+<code>
+    int[] array = { 8, 6, 4, 6, 2 }; //array initialization<br><br>
+    for(int x: array){<br>
+    System.out.println(x);<br>
+}<br>
+</code>
+
+<strong>Output:</strong><br>
+<code>
+    8 <br>
+    6 <br>
+    4 <br>
+    6 <br>
+    2 <br>
+</code>
+    </div>
+
+
+    <div class="previous">
+    <a href="./s4.html"><< <span class="spn">Previous</span></a>
+</div>
+<div class="next">
+    <a href="./s6.html"><span class="spn">Next</span> >></a>
+</div>
+</div>
+</body>
+</html>

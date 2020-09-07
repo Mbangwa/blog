@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>About me</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="../css/about/styles.css">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+
+
+<body>
+<div class="container">
+
+	<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+	
+<div class="w3-container">
+  <h2 style="text-align: center; margin-top: 100px; margin-bottom: 90px;">About me</h2>
+
+  <div class="w3-card-4" style="width:100%">
+    <header class="w3-container w3-light-grey">
+      <h3>Mbangwa (inno).</h3>
+    </header>
+    <div class="w3-container">
+      <p>Not talkative, interested in tech stuffs.</p>
+      <hr>
+      <img id="myImg" src="../images/me.png" alt="................" class="w3-left w3-circle w3-margin-right" style="width:60px">
+      <p>Student at RUAHA CATHOLIC UNIVERSITY, first year BCS.<br>If you wanna join me, You are welcome. Check my contacts in the footer section</p><br>
+    </div>
+    <button class="w3-button w3-block w3-dark-grey">+Nourish your inner geek...</button>
+  </div>
+</div>
+
+
+<h2 style="text-align: center; margin-top: 50px; margin-bottom: 50px; ">My friends.</h2>
+
+
+
+<div class="card-deck">
+  <div class="card">
+    <img src="../images/frank.jpeg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Frank</h5>
+      <p class="card-text">Humble, loves to dig deeper to understand something.. A pro in windows systems...</p>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">RUCU, Iringa</small>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="../images/fred.jpeg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Fredrick</h5>
+      <p class="card-text">A man with no fear, taking radiotherapy in MUHAS....</p>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">MUHIMBILI UNIVERSITY, Dar-es-salaam.</small>
+    </div>
+  </div>
+
+
+
+  <div class="card">
+    <img src="../images/parrot.jpeg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Happy</h5>
+      <p class="card-text">A determined girl.. Ubuntu girl... She loves to dig deeper... BCS</p>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">RUCU, iringa.</small>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+<div class="card-deck">
+  <div class="card">
+    <img src="../images/alex.jpeg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Alex</h5>
+      <p class="card-text">Interesting guy, humble, serious in studies... taking nursing in st.John, DODOMA.</p>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">St. John university, Dodoma.</small>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="../images/gaston.jpeg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Gaston</h5>
+      <p class="card-text">Funny guy, loves to talk with anyone, BCS.</p>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">RUCU, Iringa.</small>
+    </div>
+  </div>
+
+
+
+  <div class="card">
+    <img src="../images/joel.jpeg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Joel</h5>
+      <p class="card-text">Same interests, he is a pro in linux and he know everything you are doing right now! wat? yes... Hacking is his hobby.</p>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">RUCU, iringa.</small>
+    </div>
+  </div>
+  
+</div>
+</div>
+
+
+
+
+
+
+
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById("myImg");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+  modal.style.display = "none";
+}
+</script>
+</body>
+</html>

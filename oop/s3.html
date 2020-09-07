@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Java: Variables</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="../css/oop/oop.css">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+<div class="bs-example">
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <a href="../index.html" class="navbar-brand">
+            <img src="../images/my-logo.png" height="28" alt="java">
+        </a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav">
+                <a href="../docs/Oracle.pdf" class="nav-item nav-link">Hotter book</a>
+                <a href="../docs/cjv1.pdf" class="nav-item nav-link">Breeze book</a>
+            </div>
+        </div>
+    </nav>
+</div>
+
+
+
+
+<h2>
+        <strong style="color: rgba(0, 0, 100, 0.8);">Variables</strong>
+    </h2>
+
+
+    <div class="card">
+        <p class="m"> 
+            Lets go aheaaddddd.......
+        </p>
+
+
+        <p>
+            Tunajua kwamba kila computer ina <u>Memory</u> na <u>CPU</u>. Ili kuchakata data lazima computer iwe na sehemu ya kutunza data ambazo <u>znatakiwa kuchakatwa</u> na zile ambazo <u>tayari zmeshachakatwa.</u> Apo ndo inakuja umuhimu wa kua na memory kubwa ndan ya computer.
+        </p>
+
+        <p>
+        Memory yenyewe imegawanywa katika segments ndogo ndogo zenye ukubwa sawa zote! Na kila segment imepewa namba maalumu inaitwa <u><b>Memory address</b></u>. mfano <code>@x67f343g2 </code> Chukulia mfano wa Post office, kuna visanduku vingii vyenye ukubwa sawa na kila kisanduku kina namba yake ambyo ni tofaut na vsanduku vngne... Ata memory ndvo ilivo. 
+        </p>
+
+        <p>But ikaonekana ni ngumu kukalili majina ya kila memory segment kama ilivyo apo. So wakaamua kuunda kitu knachoitwa <STRONG>Variable.</STRONG></p>
+
+        <p>
+            A variable is nothing but <u>A name of memory segment!</u>.
+            <br>
+            So if u wanna store data in computer memory, u should first tell the computer <strong>what kind of data</strong> u want to store and in <strong>which memory segment</strong> u want ur data to be stored. 
+        </p>
+
+
+        <p>
+            By doing so, We say that <strong>"You declare a variable."</strong>
+        </p>
+
+        <p>
+            <i>Example on variable declaration</i> <br>
+            <code>int eyes;<br>
+                double weight;<br>
+                String name; <br>
+                boolean isTall; <br>
+                char gender;
+            </code>
+        </p>
+
+        <p>
+            Maneno <code>int, double, String, boolean na char</code> ndo yanaiambia computer ni aina gani ya data unataka kutunza. 
+            <br>
+            <code>int</code> for integers (Namba nzima) mfno 30<br>
+            <code>double</code> for decimal numbers (Namba zenye desimali) mfno 9.99 <br>
+            <code>String</code> for Strings (Maneno) mfno "mama" <br>
+            <code>boolean</code> for boolean values (kweli au sikwel) mfno true or false <br>
+            <code>char</code> for characters (herufi na alama) mfno 'Z' <br>
+        </p>
+
+
+        <p>
+            Maneno <code>eyes, weight, name, isTall na  gender</code> Ndo varables, kwa maana nyngne ndo majna ya memory segment, badala ya kutumia zile memory address sasa unaweza kuipa memory segment <u>jina lolote</u> kama tulivofanya apo! its very sweet and clear. <br>But ohhh...wait,,, jina lolote? NOOO not always,, kuna sheria za kuzipa majina memory segments... tutaona apo mbele kwenye 'rules of naming variables'
+        </p>
+
+        <p>
+            Unapoanza kuassign data kweny variable tunaita <strong><u>Initialization</u></strong> <br>
+            <i>Example on variable initialization</i><br>
+            <code>int eyes = 2;<br>
+                double weight = 4.6;<br>
+                String name = "juma"; <br>
+                boolean isTall = true; <br>
+                char gender = 'M';
+            </code><br>
+            As u see, tunatumia '=' (assigment operator kufanya initialization). <br>
+            Hapo unakua umetunza data izo kwenye izo variable.
+                    </p>
+
+        <p class="m">
+            Rules of naming a varible..
+        </p>
+
+        <ol type="i">
+            <li>Jina la variable haitakiwi liwe namba tu. Mfno <code>int <u>123</u> = 678;</code> (ni kosa)</li>
+            <li>Jina la variable halitakiwi kuanza na namba. Mfno <code>int <u>1age</u> = 103;</code> (ni kosa)</li>
+            <li>Jina la variable lisiwe sawa na maneno ambyo yametunzwa na Java language, mfno wa ayo maneno ni <code>int, String, final, extends, implements, boolean, etc.</code></li>
+            <li>Usitumie special charaters kwe varables mfno <code>int +number = 78;</code> (ni kosa)</li>
+            <li>Tumia neno <code>final</code> kuifanya variable iwe <strong>constant (isiweze badilishwa tena)</strong>. Mfno <code>final double PI = 3.14;</code></li>
+        </ol>
+
+        <p class="m">So far, so good, click next to learn more....</p>
+    </div>
+
+
+
+    <div class="previous">
+    <a href="./s2.html"><< <span class="spn">Previous</span></a>
+</div>
+<div class="next">
+    <a href="./s4.html"><span class="spn">Next</span> >></a>
+</div
+</div>
+</body>
+</html>

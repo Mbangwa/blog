@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head profile="http://www.w3.org/2005/10/profile">
+<link rel="icon" type="image/ico" href="./favicon.ico">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Java: Solutions</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="../css/oop/oop.css">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+
+<body>
+ 
+<div class="container">
+
+
+<div class="bs-example">
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <a href="../index.html" class="navbar-brand">
+            <img src="../images/my-logo.png" height="28" alt="java">
+        </a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav">
+                <a href="../docs/Oracle.pdf" class="nav-item nav-link">Hotter book</a>
+                <a href="../docs/cjv1.pdf" class="nav-item nav-link">Breeze book</a>
+            </div>
+        </div>
+    </nav>
+
+</div>
+<div class="card">
+<p class="x">Solutions za lecture slides zote za tcha shidende kwa kozi zote mbili, oop na data structure.</p>
+<p class="para s">Object oriented programming all solutions....<br>Kabla ya kutest izi solutions make sure umetengeneza class inaitwa "Main", then copy and paste this solns to test 'em.</p>
+<ol>
+    <li>Lecture 2 slide</li>
+</ol>
+<p class="para">
+    1. Write the program to add two numbers and output the sum
+</p>
+<p>
+    solution:
+</p>
+
+<code>
+    public class Main{<br>
+    public static void main(String[] args){<br><br>
+
+    int x = 8;<br>
+    int y = 9;<br>
+    int sum = x + y;<br><br>
+
+    System.out.println("Sum: " + sum);<br>
+}<br>
+}<br>
+</code>
+
+<p>
+    Output:
+</p>
+<code>
+    Sum: 17
+</code>
+
+
+
+
+
+
+<p class="para">
+    2. Write the java program that will read two integers and compute their sum.
+</p>
+
+<code>
+    
+    import java.util.*;<br>
+/**<br>
+ * @author Mbangwa (inno).<br>
+ *<br>
+ */<br>
+public class Main {<br>
+    public static void main(String[] args) {<br><br>
+        Scanner inp = new Scanner(System.in);<br>
+        //declaration of variables<br>
+        int x, y, sum;<br><br>
+        //getting two integers from the user<br>
+        System.out.print("Enter the first number: ");<br>
+        x = inp.nextInt();<br>
+        System.out.print("Enter the second number: ");<br>
+        y = inp.nextInt();<br><br>
+        
+        //calculating the sum<br>
+        sum = x + y;<br>
+        
+        //displaying the sum<br><br>
+        System.out.println("The sum is: " + sum);<br>
+    }<br>
+
+}
+<br>
+</code>
+
+<p>Sample output</p>
+<code>
+    Enter the first number: 12<br>
+Enter the second number: 34<br>
+The sum is: 46<br>
+</code>
+<div class="para">
+    3.What will be the output?
+</div>
+<code>
+import java.awt.Rectangle;<br><br>
+public class HelloRectangle{<br>
+   public static void main(String[] args){<br><br>
+    Rectangle rect1 = new Rectangle(10,5,20,30);<br>
+    Rectangle rect2 = rect1;<br>
+    rect1.translate(20,30); // shifting<br>
+    rect2.translate(10,20);<br>
+    System.out.println(rect1);<br><br>
+  }<br>
+}<br>
+</code>
+<p>Output</p>
+<code>
+    java.awt.Rectangle[x=40,y=55,width=20,height=30]
+</code>
+
+
+
+<p class="para">4.What will be the output?</p>
+<code>
+    public class Ops { <br>
+   public static void main(String[] args) { <br>
+      int x = 10, y = 20, z = 15; <br>
+      boolean check1, check2, check3, check4; <br>
+      check1 = y > x; <br>
+      check2 = y > x && x > y; <br>
+      check3 = y > x || x > y; <br>
+      check4 = y > x && !(x > y); <br>
+      System.out.println("check1 = " +check1); <br>
+      System.out.println("check2 = " +check2); <br>
+      System.out.println("check3 = " +check3); <br>
+       System.out.println("check4 = " +check4); <br>
+  } <br>
+}<br>
+</code>
+
+<p>Output</p>
+<code>
+    check1 = true<br>
+check2 = false<br>
+check3 = true<br>
+check4 = true<br>
+</code>
+</div>
+
+
+<div class="next">
+    <a href="./l1.html"><span class="spn">Next</span> >></a>
+</div>
+</div>
+</body>
+</html>

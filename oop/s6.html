@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Java: Classes and Objects</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="../css/oop/oop.css">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+<div class="bs-example">
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <a href="../index.html" class="navbar-brand">
+            <img src="../images/my-logo.png" height="28" alt="java">
+        </a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav">
+                <a href="../docs/Oracle.pdf" class="nav-item nav-link">Hotter book</a>
+                <a href="../docs/cjv1.pdf" class="nav-item nav-link">Breeze book</a>
+            </div>
+        </div>
+    </nav>
+</div>
+
+
+
+
+<h2>
+        <strong style="color: rgba(0, 0, 100, 0.8);"> Classes and objects.</strong>
+    </h2>
+
+
+    <div class="card card-y">
+    <center><p class="para">Hapa ndipo penye hekima!</p></center>
+
+        <!-- 16:9 aspect ratio --> 
+<div class="embed-responsive embed-responsive-16by9"> 
+    <iframe width="560" height="315" src="../video/video1.mp4" 
+frameborder="0" allowfullscreen></iframe>
+</div>
+    <p class="para">
+        Asilimia 99 ya java programs ni lazima zidepend on the manipulation of classes and objects.
+    </p>
+
+    <p class="para">
+        Bila kupoteza time, nini maana ya class na nini maana ya object....
+    </p>
+
+    <p class="para">
+        Tunasemaga <i><u>A class is a blueprint of an object.</u></i> Short and clear.
+    </p>
+
+    <p class="para">
+        Pia tunasemaga <i><u>An object is an instance of a class</u></i> <br>
+        Ili utengeneze object lazima ue na class. Na class ndo inakupa mwongozo ni aina gani ya object unataka kutengeneza
+    </p> 
+    <p class="para">
+        Hua tunatumia neno <strong>new</strong> kuunda object. <br>
+        Kitendo cha kutengeneza object kinaitwa <b>Instantiation</b> (Creating an instance of a class).
+    </p>
+    </div>
+
+    <div class="card">
+        <p class="m">
+            So, how do we create a class?
+        </p>
+
+        <p>
+            Kwanza inabidi ujue ni variables zipi zinaitajika kutunza data, na method zipi nahitaji ili kuchakata data zako.
+        <br>
+        Variables and methods ndani ya class kwa ujumla tunaziitaga <strong>data members (Instance variables).</strong>
+        </p>
+
+        <p>
+            Sometimes utataka data flani isiweze kuonekana wala kuchakatwa nje ya class, au unaeza taka data flani ndani ya class iweze kuonekana hata nje ya class husika, Kitendo hiki cha kuficha baadhi ya data na kuonyesha baadhi ya data tunakiita <strong>Encapsulation</strong>. <br>
+            Ili kuficha data ua tunatumia neno <strong>private</strong> Na ili kuzifanya zionekane tunatumia neno <strong>public</strong> kwenye variable and method definitions
+        </p>
+
+        <p class="para">Tuone mfano mmoja wa class.</p>
+        <code>
+            class Animal {<br> <br>
+            private double weight;<br>
+            private int legs;<br>
+            public String color;<br><br>
+        }<br>
+        </code>
+
+        <p>
+            Apo variables zote tulizoziunda kwa neno <strong>private</strong> zitaonekana tu ndani ya class <strong>Animal</strong>, Apa namanisha huezi zipata nje ya class <strong>Animal</strong>.<br>
+
+            Na Variable ambayo tumeiunda kwa kutumia neno <strong>public</strong> itaweza kutumika na kuonekana nje ya class
+        </p>
+
+        <p class="para">
+            Accessor and mutator
+        </p>
+
+        <p>
+            In normal language, an Accessor is a thing that have given a permission to get something, In swahili we say that an accessor ni mtu au kitu ambcho kina ruusa ya kupata au kuchukua kitu kutoka seem ambyo mtu mwingne ambye hana ruusa hawez chukua au kupata.
+        </p>
+        <p>
+            But a mutator is a thing that can change something. 
+        </p>
+        <p>
+            In the above class tumeona kuna variables ambazo ni 'private' na nyingne ni 'public', na tukasema kwamba 'private' data aziwezi onekana nje ya class, so how can we get and change them when we need to?
+            <br>
+            The answer is simple, we use <strong>Accessors and mutators</strong>
+        </p>
+
+        <p class="m">So how do we do?</p>
+        <p>
+            Ili kuweza zipata 'private' data nje ya class utatumia <strong>Accessors</strong>, na kama unataka kubadili data iliomo ndani ya memory utatumia <strong>Mutators</strong><br>
+            Look: <br>
+        </p>
+
+        <code>
+            public class Animal {<br><br>
+            private int legs;<br>
+            private double weight;<br><br>
+
+            //Accessors <br>
+            public int getLegs(){<br>
+            return legs;<br>
+        }<br><br>
+        public double getWeight(){<br>
+        return weight;<br>
+    }<br><br>
+    //Mutators<br>
+    public void setLegs(int legs){<br>
+    this.legs = legs;<br>
+}<br>
+public void setWeight(double weight){<br>
+    this.weight = weight;<br>
+}<br>
+        }<br><br>
+
+        </code>
+
+        <p>
+            Tunatumia neno <strong>this</strong> kama variable uliotengeneza ndani ya setter method ina jina sawa na iliopo kwe instance variables za class. Kama hutotumia neno <strong>this</strong> compiler itapata shida sana kujua ni variable ipi unamanisha, itakupa warning and then itaashum ni variable moja ya kwenye setter.
+        </p>
+
+        <p class="para">
+            Kwaio <strong>Setters</strong> zote ni mutator na <strong>Getters</strong> zote ni accessors.
+        </p>
+
+        <p class="m">Constructors</p>
+
+        <div class="embed-responsive embed-responsive-16by9"> 
+    <iframe width="560" height="315" src="../video/video2.mp4" 
+frameborder="0" allowfullscreen></iframe>
+</div>
+        <p>
+            A constructor is nothing but a special method that initializes some instace variables as soon as an object is created. <br>
+            So kama unataka pale tu unapotengeneza object iwe na default properties bhac ua tunatumia constructors kufanya hvo. <br>
+        </p>
+        <p class="para">
+            Constructors zote hua zina majina sawa na jina la class husika na inakua haina return data type.<br>
+            Look: <br>
+
+
+            <code>
+            public class Animal {<br><br>
+            private int legs;<br>
+            private double weight;<br><br>
+            //constructor<br>
+            public Animal(int l, double w){
+            <br>
+            legs = l;<br>
+            weight = w;<br>
+        }<br><br>
+            //Accessors <br>
+            public int getLegs(){<br>
+            return legs;<br>
+        }<br><br>
+        public double getWeight(){<br>
+        return weight;<br>
+    }<br><br>
+    //Mutators<br>
+    public void setLegs(int legs){<br>
+    this.legs = legs;<br>
+}<br>
+public void setWeight(double weight){<br>
+    this.weight = weight;<br>
+}<br>
+        }<br><br>
+
+        </code>
+
+        </p>
+
+
+        <p>Kwaio ukitengeneza object ya io class lazima utainitilize 'legs' na 'weight', Otherwise, u gonna get a huge error</p>
+    </div>
+
+
+
+     <div class="previous">
+    <a href="./s5.html"><< <span class="spn">Previous</span></a>
+</div>
+<div class="next">
+    <a href="./s7.html"><span class="spn">Next</span> >></a>
+</div>
+</div>
+</body>
+</html>

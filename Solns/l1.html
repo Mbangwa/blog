@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head profile="http://www.w3.org/2005/10/profile">
+<link rel="icon" type="image/ico" href="./favicon.ico">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Java: Solutions</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="../css/oop/oop.css">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+
+<body>
+ 
+<div class="container">
+
+
+<div class="bs-example">
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <a href="../index.html" class="navbar-brand">
+            <img src="../images/my-logo.png" height="28" alt="java">
+        </a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav">
+                <a href="../docs/Oracle.pdf" class="nav-item nav-link">Hotter book</a>
+                <a href="../docs/cjv1.pdf" class="nav-item nav-link">Breeze book</a>
+            </div>
+        </div>
+    </nav>
+
+</div>
+<div class="card">
+<p class="m">Lecture 3 slide questions and answers</p>
+<p class="para">
+   1.Write a program to manage withdrawals from a bank account. If there are enough funds, the program should accept the withdrawal, otherwise it should reject it.
+</p>
+<code>
+    import java.util.*;<br>
+    /**<br>
+ * @author Mbangwa (inno).<br>
+ *<br>
+ */<br>
+class Account{<br>
+    private double balance;<br><br>
+    
+    //constructor<br>
+    public Account(double balance) {<br>
+        setBalance(balance);<br>
+    }<br><br>
+    
+    //Getters and setters<br>
+    public void setBalance(double balance) {<br>
+        this.balance = balance;<br>
+    }<br><br>
+    
+    public double getBalance() {<br>
+        return balance;<br>
+    }<br><br>
+    
+    //withdraw method<br>
+    public void withdraw(int withdraw_amount) {<br>
+        //tucheki kama kuna balance yyte<br>
+        if(balance != 0 && withdraw_amount < balance) {<br>
+            balance -= withdraw_amount;<br>
+            System.out.println("Umefanikiwa kutoa Sh. " + withdraw_amount);<br>
+            System.out.println("Salio: " + balance);<br>
+        }else{<br>
+            //kama ela amna uezi toa chochote<br>
+            
+            System.out.println("Withdraw rejected, insufficient fund");<br>
+        }<br>
+    }<br>
+}<br><br>
+
+public class Main {<br>
+    public static void main(String[] args) {<br>
+        
+        Account account = new Account(10000); // tumeanzisha akaunt kwa sh 10000<br>
+        Scanner scan = new Scanner(System.in);<br>
+
+        System.out.print("Ingiza kiasi: "): <br>
+        int a = scan.nextInt();<br>
+        account.withdraw(a);<br><br>
+        
+        
+    }<br>
+
+}<br>
+</code>
+<p>
+    Output:
+</p>
+<code>
+    Ingiza kiasi: 2000<br>
+    Umefanikiwa kutoa Sh. 2000<br>
+Salio: 8000.0<br>
+</code>
+
+<p class="para">
+    2.The following program tries to print the final marks obtained in RCS105, Identify all errors and write the correct statements<br>
+</p>
+
+
+    <code>
+        if marks >= 40;<br>
+      System.out.println(“You passed RCS105”);<br>
+      System.out.println(“You may proceed to RCS109”);<br>
+else<br>
+      System.out.println(“You failed RCS105”);<br>
+      System.out.println(“You have to repeat RCS105”);<br>
+    </code>
+
+
+
+<p>
+    Answers: <br>
+    <code>
+        if marks >= 40; // Kosa la kwanza, ajadeclare variable <strong>marks</strong> pia, ameweka semicoloni kweny condition<br>
+      System.out.println(“You passed RCS105”); // Kosa lingine, katumia wrong double quotes.<br>
+      System.out.println(“You may proceed to RCS109”);<br>
+else<br>
+      System.out.println(“You failed RCS105”);<br>
+      System.out.println(“You have to repeat RCS105”);<br>
+    </code>
+</p>
+
+
+<p>
+    correct program:
+</p>
+<code>
+/**<br>
+ * @author Mbangwa (inno).<br>
+ *<br>
+ */<br>
+public class Main {<br><br>
+    public static void main(String[] args) {<br>
+        int marks = 50;<br>
+        if (marks >= 40) {<br>
+            System.out.println("You passed RCS109");<br>
+          System.out.println("You may proceed to RCS109");<br>
+        }else {<br>
+          System.out.println("You may proceed to RCS109");<br>
+          System.out.println("You have to repeat RCS105");<br><br>
+    }<br>
+    }<br>
+}<br>
+
+</code>
+
+<p>Sample output:</p>
+<code>
+    You passed RCS109<br>
+You may proceed to RCS109<br>
+</code>
+
+
+
+<p class="para">
+    3.What happen in the code below if amount entered is negative? Positive?
+</p>
+
+<code>
+    // read amount<br><br>
+…<br>
+if ( amount < 0){<br>
+    System.out.println(“MMmmh! This ?”);<br>
+    System.out.println(“OK!”);<br>
+} <br>
+</code>
+
+<p>
+    Answers: <br>
+</p>
+<p>
+    If the input is negative:<br>
+    Output itakua ivi<br>
+    <code>
+        MMmmh! This ?<br>
+        OK!<br>
+    </code>
+</p>
+<p>
+    If the input is positive, NO OUTPUT!
+</p>
+
+
+
+<p class="para">
+    4.Given:
+</p>
+
+<code>
+    if (mark >= 40) // pass the subject<br>
+if (mark >= 60) <br>
+      System.out.println("Well done!");<br>
+else<br>
+      System.out.println("Passed the subject");<br>
+</code>
+<p>i.What will be the output if the following are inputs?</p>
+<table border="1px">
+<tr>
+        <th style="text-align: center; color: white; background-color: rgba(0, 0, 200, 0.5);">INPUT</th>
+        <th style="text-align: center; color: white; background-color: rgba(0, 0, 200, 0.5);">OUTPUT</th>
+</tr>
+<tr style="background-color: #ccc">
+    <td>85</td>
+    <td></td>
+</tr>
+<tr style="background-color: #ddd">
+    <td>65</td>
+    <td></td>
+</tr>
+<tr style="background-color: #ccc">
+    <td>25</td>
+    <td></td>
+</tr>
+<tr style="background-color: #ddd">
+    <td>125</td>
+    <td></td>
+</tr>
+    
+</table>
+
+<p>
+    Outputs: <br>
+</p>
+
+<table border="1px">
+<tr>
+        <th style="text-align: center; color: white; background-color: rgba(0, 0, 200, 0.5);">INPUT</th>
+        <th style="text-align: center; color: white; background-color: rgba(0, 0, 200, 0.5);">OUTPUT</th>
+</tr>
+<tr style="background-color: #ccc">
+    <td>85</td>
+    <td>Well done!</td>
+</tr>
+<tr style="background-color: #ddd">
+    <td>65</td>
+    <td>Well done!</td>
+</tr>
+<tr style="background-color: #ccc">
+    <td>25</td>
+    <td>No output.</td>
+</tr>
+<tr style="background-color: #ddd">
+    <td>125</td>
+    <td>Well done!</td>
+</tr>
+    
+</table>
+
+<p>
+    ii. Can you notice the misbehaving of program? 
+</p>
+<p>Answer:</p>
+<p>Yes! the program is misbehaving.</p>
+
+<p>
+    iii. Write the correct segment that will not misbehave
+</p>
+<p>
+    Answer:
+</p>
+    <code>
+        import java.util.*;<br>
+/**<br>
+ * @author Mbangwa (inno).<br>
+ *<br>
+ */<br><br>
+public class Main {<br><br>
+    public static void main(String[] args) {<br><br>
+        Scanner scan = new Scanner(System.in);<br>
+        System.out.print("Enter your marks: ");<br><br>
+        int mark = scan.nextInt();<br><br>
+        
+        if (mark >= 40 && mark <= 59){// pass the subject<br>
+            System.out.println("Passed the subject");<br>
+        }<br>
+        else if (mark >= 60 && mark <= 100) {<br>
+                  System.out.println("Well done!");<br>
+                  } <br>
+    }<br>
+}<br>
+
+    </code>
+
+
+<p class="para">
+    5.Write a program that asks user to enter marks and the program will output grade according to the following table
+</p>
+
+
+<table border="1px">
+<tr>
+        <td style="text-align: center; color: white; background-color: rgba(0, 0, 200, 0.5);">Marks</td>
+        <td style="text-align: center; color: white; background-color: rgba(0, 0, 200, 0.5);">0-34</td>
+        <td style="text-align: center; color: white; background-color: rgba(0, 0, 200, 0.5);">35-39</td>
+        <td style="text-align: center; color: white; background-color: rgba(0, 0, 200, 0.5);">40-49</td>
+        <td style="text-align: center; color: white; background-color: rgba(0, 0, 200, 0.5);">50-59</td>
+        <td style="text-align: center; color: white; background-color: rgba(0, 0, 200, 0.5);">60-69</td>
+        <td style="text-align: center; color: white; background-color: rgba(0, 0, 200, 0.5);">70-100</td>
+        
+</tr>
+<tr style="background-color: #ccc">
+    <td style="text-align: center; color: white; background-color: rgba(0, 0, 200, 0.5);">Grade</td>
+        <td style="text-align: center; color: white; background-color: rgba(0, 0, 200, 0.5);">E</td>
+        <td style="text-align: center; color: white; background-color: rgba(0, 0, 200, 0.5);">D</td>
+        <td style="text-align: center; color: white; background-color: rgba(0, 0, 200, 0.5);">C</td>
+        <td style="text-align: center; color: white; background-color: rgba(0, 0, 200, 0.5);">B</td>
+        
+        <td style="text-align: center; color: white; background-color: rgba(0, 0, 200, 0.5);">B+</td>
+        <td style="text-align: center; color: white; background-color: rgba(0, 0, 200, 0.5);">A</td>
+</tr>
+    
+</table>
+<p>Answer: </p>
+<code>
+    
+import java.util.Scanner;<br><br>
+
+//written by Mbangwa (inno).<br><br>
+
+public class Main {<br>
+    public static void main(String [] args) {<br>
+        Scanner sc = new Scanner(System.in);<br>
+        System.out.print("Enter your marks: ");<br>
+        int marks = sc.nextInt();<br><br>
+        
+        if(marks >= 70 && marks <= 100) {<br>
+            System.out.println("Grade: A");<br>
+        }<br>
+        else if(marks >= 60 && marks <= 69) {<br>
+            System.out.println("Grade: B+");<br>
+        }<br>
+        else if(marks >= 50 && marks <= 59) {<br>
+            System.out.println("Grade: B");<br>
+        }<br>
+        else if(marks >= 40 && marks <= 49) {<br>
+            System.out.println("Grade: C");<br>
+        }<br>
+        else if(marks >= 35 && marks <= 39) {<br>
+            System.out.println("Grade: D");<br>
+        }<br>
+        else if(marks >= 0 && marks <= 34) {<br>
+            System.out.println("Grade: E");<br>
+        }<br>
+        else {<br>
+            System.out.println("Invalid marks");<br>
+        }<br>
+    }<br>
+
+}<br><br>
+</code>
+
+<p class="para">
+    6.Write the program that computes net payment of an employee. The program will receive the hours worked and payment rate per hour. The employee is taxed 20% of his gross income if it exceeds 100,000/=
+</p>
+<p>
+    Answer:
+</p>
+<code>
+    import java.util.*;<br><br>
+// written  by mbangwa (inno)<br>
+class Gross{<br>
+    private double gross;<br>
+    private int hours;<br><br>
+    
+    //constructor<br>
+    public Gross(double gross, int hours) {<br>
+        setGross(gross * hours);<br>
+        setHours(hours);<br>
+    }<br><br>
+    
+    //setter and getters<br>
+    public void setGross(double gross) {<br>
+        this.gross = gross;<br>
+    }<br><br>
+    
+    public void setHours(int hours) {<br>
+        this.hours = hours;<br>
+    }<br><br>
+    
+    public double getGross() {<br>
+        return gross;<br>
+    }<br><br>
+    
+    /*Note, sijaeka getters za hours na rate bcoz cna haja nazo kweny output, only gross ndo tuna haja nayo*/<br><br>
+    
+    
+    public void calculateGross() {<br>
+        if(gross > 100000) {<br>
+            double less = gross * 0.2;<br>
+            gross -= less;<br>
+            System.out.print("Gross: " + this.gross);<br>
+        } <br>
+        else {<br>
+            System.out.print("Gross: " + this.gross);<br>
+        }<br>
+}<br>
+}<br><br>
+
+public class Main {<br><br>
+
+    public static void main(String[] args) {<br>
+        Scanner scan = new Scanner(System.in);<br>
+        System.out.print("Deposit initial money: ");<br>
+        int g = scan.nextInt();<br>
+        System.out.print("Enter hours of work: ");<br>
+        int h = scan.nextInt();<br><br>
+        
+        Gross gross = new Gross(g, h);<br>
+        gross.calculateGross();<br><br>
+        
+    }<br>
+
+}<br><br>
+</code>
+
+
+<p class="para">
+    
+    7.Write a program to accept characters as input, and quit when a 'Q‘ or a 'q‘ is typed, printing how many characters other than 'q‘ or 'Q‘ have been typed. 
+</p>
+
+<p>
+    Answer:
+</p>
+<code>
+    import java.util.*;<br>
+/**<br>
+ * @author Mbangwa (inno).<br>
+ *<br>
+ */<br>
+public class Main {<br>
+    public static void main(String[] args) {<br><br>
+        
+        Scanner scan = new Scanner(System.in);<br>
+        char ch;<br>
+        int count = 0;<br>
+        do {<br>
+            System.out.print(">> ");<br>
+            ch = scan.next().charAt(0);<br>
+            count++;<br>
+        } while(ch != 'q' && ch != 'Q');<br><br>
+        
+        System.out.println("You typed " + (count-1) + " characters");<br>
+    }<br>
+}<br>
+</code>
+</div>
+
+
+
+<div class="previous">
+    <a href="./solns.html"><< <span class="spn">Previous</span></a>
+</div>
+<div class="next">
+    <a href="./l2.html"><span class="spn">Next</span> >></a>
+</div>
+</div>
+</body>
+</html>

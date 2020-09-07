@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Java: Object Oriented Programmming</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="../css/oop/oop.css">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+	
+<div class="container">
+
+
+<div class="bs-example">
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <a href="../index.html" class="navbar-brand">
+            <img src="../images/my-logo.png" height="28" alt="java">
+        </a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav">
+                <a href="../docs/Oracle.pdf" class="nav-item nav-link">Hotter book</a>
+                <a href="../docs/cjv1.pdf" class="nav-item nav-link">Breeze book</a>
+            </div>
+        </div>
+    </nav>
+	
+	<div class="header">
+		<h2>
+			Object oriented programming
+		</h2>
+	</div>
+<img src="../images/oop.png" class="img-fluid" alt="Responsive image">
+
+<div class="right">
+	<h3>What the hell OOP doin' here in Java?...
+	(Intro to OOP)</h3>
+</div>
+	
+<div class="f-sec">
+	<h2>
+		<strong style="color: rgba(0, 0, 100, 0.8);">Nini maana ya OOP? </strong>
+	</h2>
+	<p><b>OOP</b> means OBJECT ORIENTED PROGRAMMING.</p>
+	<p>Hii inamanisha ni aina mpya ya programming ambayo utaandika programs zako kwa kuzigawa katika makundi madogo madogo yaitwayo <b>CLASS</b> ili iwe rahisi kutafuta makosa na uboreshaji.</p>
+	<p>Kutokana na <b>CLASS,</b> unaweza kutengeneza <b>objects,</b> this works the same as classification in biology.</p>
+	<p>
+		faida za OOP ni kama:
+		<ol type="i">
+			<li>
+				<strong>Re usability</strong> -> Ukitengeneza <b>Class</b> moja unaweza itumia sehemu zingne za project zako kwa ku-import tu. Ka ivi <code>import java.util.Scanner;</code>.So inakua amna haja ya kuiandika mara ya pili tena.
+			</li>
+			<li>
+				<strong>Security</strong> -> Kwa kuficha data na zile mechanism za abstraction, tunaweza kuficha baadhi ya maeneo ya program mtu asiweze badili chochote, hii inawezekana kwa kutumia modifier kama <b>private, public, final na protected</b>. What the f***.. Yeah. that is it. Tutaona mbele ....
+			</li>
+		</ol>
+		.....etc...... zpo nyingiiiii
+	</p>
+</div>
+
+
+<div class="s-sec">
+	<h2>
+		<strong style="color: rgba(0, 0, 100, 0.8);">Simplest java program.. </strong>
+	</h2>
+	<code>
+		public class Animal{ <br><br>
+
+		public static void main(String[] args){<br>
+			System.out.println("Animals can eat.");<br>
+	}<br>
+	}<br>
+	</code>
+	<hr>
+
+	<p>
+		Tumesema hivii, kila program ya java lazima iwe ndani ya class flani, ndomana Tunasema java ni pure OOP language. Bila class huezi andka program ya java.
+	</p>
+	<p>Now tuichambue kama karanga io program rahisi kulko zote duniani.</p>
+	<p><code>public class Animal {}</code> -> Neno <b>public</b> ni access modifier, means linaipa class uwezo wa kuonekana na class zingine ambazo utatengeneza. Neno <b>class</b> baada ya <u>public</u> ndo linaiambia compiler kua iki kitu nnachotengeneza ni class. Na mbele ya neno <u>class</u> itafatiwa na jina la io class unayotaka kutengeneza. Mfano apo nmetumia neno <u>Animal</u> kama class name.
+</p>
+
+<p>
+	<code>
+		public static void main(String[] args){}
+	</code>
+	-> Pia apa matumizi ya neno <b>public</b> ni kama ya kwe <b>class</b>. Neno <b>static</b> linamaanisha "hii method haitohitaji wala kutegemea utengenezaji wa <b>object</b> ya hii class". Tunajua kwamba kila ukitengeneza class nje ya main program lazima utengeneze object ya ile class kwanza ndo ueze itumia. But ukidefine method or class as <u>static</u> haitohtaj utengeneze object. <br>This is so beautiful......
+	<br>Neno <b>main(String [] args)</b> linatamblisha kua ii ni method kuu (main method). Ili computer itambue ipi ni program na ipi ni class ua inaangalia uepo wa <u>main method ikiwa na parameter zake ndani i.e String [] args.</u> Hizi parameters znamanisha kua ii method inaweza chukua arrays of strings kutoka kwe terminal console. Kama ujaelewa apa tulza munkari... mbele utaelewa tuuuu.
+</p>
+
+
+<p>
+	<code>
+		System.out.println("Animals can eat.");
+	</code> <u>System.out</u> ni package kama packages ambazo hua unatengneza ukiwa unataka kutengeneza project flani ndani ya editor kam eclipse. Na ndani ya io package kuna class ambayo imebeba methods nyingi tu.. but method hii <u>println()</u> ni method ambyo inauwezo wa kutoa output ya chochot utachoandika ndani yake, either a varible, string or object! So apa maneno "Animals can eat" yatatoka kama output.<br>Naa, mwsho unaona kuna <u>semicolon,</u> ii ndo inakamilisha statement. Bila io compiler haitoelewa mwsho wa statement yako ni upi, kwo automatically itakupa error<br> So, hakuna kitu kigumu apo, ni easy like ndizy.. keep goin
+</p>
+</div>
+
+
+<div class="l-s-sec">
+	<h2>
+		<strong style="color: rgba(0, 250, 0, 0.9);">
+			Hey prezoooooww... Java is so simpooo
+		</strong>
+	</h2>
+
+	<p class="para">
+		If you wanna understand it deeply, make sure u understand objects and classes. Otherwise, your life in this career will be so difficult my fellow..
+	</p>
+
+	<p class="para">
+		Everything in java depends upon creating a class and most of the time you will need to create objects from that class, so failure to understand the interaction of classes and objects will make your life so difficult.
+	</p>
+	
+</div>
+
+<div class="r-s-sec">
+	<h2>
+		<strong style="color: rgba(0, 250, 0, 0.9);">
+			Sooo, nini maana ya <u>class na object.</u>
+		</strong>
+</h2>
+		<p class="para">
+			A <strong>class</strong> is a blueprint of an object! <br> OH! shit.. mbona chenga!! <br>Noo, tupo digitali saivii, kama unaona chenga badili io network ya brain ako iingie digitali. Nmesema, Class ni kama ramani flani ambyo utaitumia kutengeneza vitu mbali mbali, ivo vitu vnaitwa <u>objects</u> ata kwenye java ni jina ilo iloow.
+		</p>
+	
+	<p class="para">
+		Mfano mzuri, ni classification in biology, ata o-level ulisoma, kuna class mbali mbali za viumbe. Class flani inakua na tabia flan ambzo viumbe vyote kweny io class vnazo.. like repro.. Ah umeelewa nahc..
+		So ata kwe java tuna classes na viumbe (objects). Vyote tunavtengeneza kwa codes a.k.a programming.
+	</p>
+	
+</div>
+
+<div class="next">
+	<a href="./s2.html">Next >></a>
+</div>
+</div>
+</body>
+</html> 

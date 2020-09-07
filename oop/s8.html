@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Java: Inheritance</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="../css/oop/oop.css">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+<div class="bs-example">
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <a href="../index.html" class="navbar-brand">
+            <img src="../images/my-logo.png" height="28" alt="java">
+        </a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav">
+                <a href="../docs/Oracle.pdf" class="nav-item nav-link">Hotter book</a>
+                <a href="../docs/cjv1.pdf" class="nav-item nav-link">Breeze book</a>
+            </div>
+        </div>
+    </nav>
+</div>
+
+
+
+
+<h2>
+        <strong style="color: rgba(0, 0, 100, 0.8);">Inheritance</strong>
+</h2>
+<p class="para">Inheritance is sweet, it minimizes the time for typing the same codes over and over again.<br><b>The rule is, <i>never repeat yourself.</i></b></p>
+
+   <div class="embed-responsive embed-responsive-16by9"> 
+    <iframe width="560" height="315" src="../video/video4.mp4" 
+frameborder="0" allowfullscreen></iframe>
+</div>
+<p>
+    Inheritance ni kurithi.<br>
+    Object moja inaweza kurithi tabia za object nyingine.
+</p>
+<p>
+    Tumia neno <strong>final</strong> kuzuia class isirithiwe tabia zake.<br>
+    Tumia neno <strong>extends</strong> kurithi tabia za class flani.
+    <br>Class ambayo imerithiwa tabia zake inaitwa <strong>super class au parent class</strong>
+    <br>Class ambyo imerithi tabia za class flani inaitwa <strong>subclass or child class</strong>.<br>
+    Kumbka, <i>constructors hua haziwezi rithiwa, so kama una class ambyo ina constructor na unataka kurithi tabia zake bhac lazima uiite io constructor kweny child or sublclass kwa kutumia neno <strong>super</strong></i>, otherwise u gonna have an error.
+</p>
+<p>
+    Mfno: <br>
+    tunaeza tengeneza class Plant ikarithi class Animal, so class plants itakua na tabia zote za animal, na ikitaka kujiongezea pia itajiongezea tabia zingne.<br>
+
+
+    <code>
+        public class Plant <i>extends</i> Animal {<br><br>
+        public Plant(int l, double w){<br>
+        super(l,w); //tunatumia super keyword to call a superclass constructor.<br> <br>
+    }<br>
+    }<br>
+    </code>
+</p>
+
+<p>
+    In java it is not possible to assign one reference type to another except for superclass and subclass.<br>Here we mean, lazima class mbili ziwe na uhusiano wa kurithian ndo utaweza assign object moja ya super na object ingne ya sub-class.
+</p>
+
+<p class="para">Method overriding.</p>
+<div class="embed-responsive embed-responsive-16by9"> 
+    <iframe width="560" height="315" src="../video/video5.mp4" 
+frameborder="0" allowfullscreen></iframe>
+</div>
+<p>
+    Method overriding is simpo,, just kubadli statement za kweny method body za methods zilizo kweny superclass ukiwa ndani ya subclass without changing the signature of that method.
+</p>
+
+
+
+  <div class="previous">
+    <a href="./s7.html"><< <span class="spn">Previous</span></a>
+</div>
+<div class="next">
+    <a href="./s9.html"><span class="spn">Next</span> >></a>
+</div>
+</div>
+</body>
+</html>
