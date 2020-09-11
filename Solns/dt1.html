@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head profile="http://www.w3.org/2005/10/profile">
+<link rel="icon" type="image/ico" href="./favicon.ico">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Java: Solutions</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="../css/oop/oop.css">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+
+<body>
+ 
+<div class="container">
+<div class="card">
+<p class="x">Solutions.</p>
+<p class="para s">Data structure solutions.</p>
+<p>
+  <i>NOTE: Tengeneza class empty yenye jina sawa na jina la class yoyote utayocopy kutoka umu for testing. Otherwise u gonna endup with erros.</i>
+</p>
+
+<p class="para">
+    1 (a).Write a java class named Stats that has one data member of type array of int and two methods one calculate the maximum number and another calculate the average number.<br>
+    (b).Write the java program named StatsMain that make use of Stats class by allowing user to enter numbers and then use the above class to compute maximum and average number
+</p>
+
+<p>
+    Solution:
+</p>
+
+<p>
+    Stats class: <br>
+
+    <code>
+        
+/** <br>
+ * @author Mbangwa (inno).<br>
+ *<br>
+ */<br>
+public class Stats {<br>
+    // one data member of type array of int<br><br>
+    
+    int[] array;<br><br>
+    
+    public Stats(int size) {<br>
+        // array initialization<br>
+        array = new int[size];<br>
+    }<br><br>
+    
+    // method for average<br><br>
+    
+    public double average() {<br><br>
+        
+        double total = 0;<br>
+        double average = 0;<br><br>
+        
+        for(double value: array) {<br>
+            total += value;<br>
+        }<br><br>
+        average = total/array.length;<br>
+        return average;<br>
+    }<br><br>
+    
+    
+    // maximum finder method<br><br>
+    
+    public double maximum() {<br><br>
+        
+        // assuming the maximun number is the first number in our array<br><br>
+        double maximum = array[0]; <br>
+        
+        for (double value: array) {<br>
+            if (value > maximum) {<br>
+                maximum = value;<br>
+            }<br>
+        }<br>
+        
+        return maximum;<br>
+    }<br>
+
+}<br><br>
+    </code>
+</p>
+
+<p>
+    StatsMain class: <br>
+
+
+    <code><br>
+
+import java.util.Scanner;<br>
+/**<br>
+ * @author Mbangwa (inno).<br>
+ *<br>
+ */<br><br>
+public class StatsMain {<br>
+    public static void main(String[] args) {<br>
+        int size;<br>
+        int count = 0;<br>
+        Scanner scan = new Scanner(System.in);<br>
+        System.out.print("Enter size of an array: ");<br>
+        size = scan.nextInt();<br><br>
+        
+        // lets create an object of Stats class.<br>
+        Stats stat = new Stats(size);<br><br>
+        
+        //prompt the user to enter values<br>
+        System.out.println("Enter values");<br>
+        while(true) {<br>
+            System.out.print(">> ");<br>
+            int value = scan.nextInt();<br>
+            stat.array[count] = value;<br>
+            count++;<br>
+            if(count > stat.array.length-1) {<br>
+                break;<br>
+            }<br>
+        }<br><br>
+        double avg = stat.average();<br>
+        double max = stat.maximum();<br><br>
+        
+        System.out.println("Average: " + avg);<br>
+        System.out.println("Maximum: " + max);<br>
+}<br>
+}<br><br>
+
+    </code>
+</p>
+
+
+
+<p class="para">
+	2.Write the program that will accept list of names by using the class ArrayList and display them
+</p>
+<p>
+	Answer:
+</p>
+<p>
+	<code>
+import java.util.*;<br>
+/**<br>
+ * @author Mbangwa (inno).<br>
+ */<br>
+public class Main {<br>
+	public static void main(String[] args) {<br><br>
+		
+		Scanner scan = new Scanner(System.in);<br>
+		ArrayList&lt;String> names = new ArrayList&lt;&gt;();<br>
+		int size;<br>
+		String name;<br>
+		System.out.print("Enter a number of names that you want to store: ");<br>
+		size = scan.nextInt();<br>
+		for(int i=0; i&lt;size; i++) {<br>
+			System.out.print("Enter a name: ");<br>
+			name = scan.next();<br>
+			names.add(name);<br>
+		}<br><br>
+		
+		System.out.println("Names: " + names);<br><br>
+	}<br>
+}<br><br>
+	</code>
+</p>
+
+<p class="para">
+	3.Write an algorithm to convert binary number to decimal number, then write a java method to implement this algorithm.
+</p>
+<p>
+	Answer:
+</p>
+<p>
+	Algorithm:<br>
+	1.Input the binary number.<br>
+2.Multiply each digit of the binary number with the power of 2 and add each multiplication result.<br>
+3.The power starts from 0 to n-1 where n is the total number of digits in the binary number.<br>
+</p>
+<p>
+	<code>
+		// Java program to convert binary to decimal<br><br>
+
+import java.io.*;<br><br>
+
+class Main {<br><br>
+
+// Function to convert binary to decimal<br>
+static int binaryToDecimal(String n)<br>
+{<br>
+String num = n;<br>
+int dec_value = 0;<br><br>
+
+// Initializing base value to 1 which is (2^0)<br>
+int base = 1;<br><br>
+
+int len = num.length();<br>
+for (int i = len – 1; i >= 0; i–) {<br>
+if (num.charAt(i) == ‘1’)<br>
+dec_value += base;<br>
+base = base * 2;<br>
+}<br><br>
+
+return dec_value;<br>
+}<br><br>
+
+public static void main(String[] args)<br>
+{<br>
+String num = new String(“1111”);<br>
+System.out.println(binaryToDecimal(num));<br>
+}<br>
+}<br><br>
+
+	</code>
+</p>
+
+<p class="para">
+	4.Recursive binary search <br><br>
+
+	<code>
+	public int find(long searchKey, int left, int right){<br>
+   int mid;<br>
+   mid = (left+ right) / 2;<br>
+    if(a[mid]==searchKey) return mid; // found it<br>
+    else if(left > right)  return -1; // can’t find it<br>
+    else {  // divide range<br>
+         if(a[mid] < searchKey) // it’s in upper half<br>
+                return find(searchKey, mid+1, right);<br>
+         else // it’s in lower half<br>
+                return find(searchKey, left, mid-1);<br>
+     } // end else divide range<br>
+} <br>
+</code>
+</p>
+
+<p class="para">
+	5.Write a method that find the sum of first n integers <br><br>
+</p>
+<p>
+	Answer:
+</p>
+<p>
+	<code><br><br>
+		public static int sum(int n) {<br>
+		if(n==0) return 0;<br>
+		return n + sum(n-1);<br>
+	}<br><br>
+	</code>
+</p>
+
+<p class="para">
+	6.Write a method that find the factorial of a positive integer.
+</p>
+<p>
+	<code><br><br>
+		public static int fact(int n) {<br>
+		if(n == 0) return 1;<br>
+		if(n == 1) return 1;<br>
+		return n * fact(n-1);<br>
+	}<br><br>
+	</code>
+</p>
+
+<p class="para">
+	7.The Fibonacci series is given by: 1, 1, 2, 3, 5, 8, 13, etc, write a method that will compute the nth Fibonacci number
+</p>
+<p>
+	Answer:
+</p>
+<p>
+	<code>
+	public static int fib(int n) {<br>
+		if (n==1) return 1;<br>
+		if (n==2) return 1;<br>
+		return fib(n-2) + fib(n-1);<br>
+	}<br>
+</code>
+</p>
+
+<p class="para">
+	8.Write a method that compute the power(x, n) where power(x, n)=xn 
+</p>
+<p>
+	Answer:
+</p>
+<p>
+	<code>
+		public static int pow(int x, int n) {<br>
+		if(n==0) return 1;<br>
+		if (n==1) return x;<br>
+		return x * pow(x, n-1);<br>
+	}<br>
+	</code>
+</p>
+
+<p class="para">
+	9.Write a method that compute the greatest common divisor of two positive integers
+</p>
+
+<p>
+	Answer:
+</p>
+
+<p>
+	<code>
+	public class GCD {<br><br>
+
+    public static void main(String[] args) {<br>
+        int n1 = 366, n2 = 60;<br>
+        int hcf = hcf(n1, n2);<br><br>
+
+        System.out.printf("G.C.D of %d and %d is %d.", n1, n2, hcf); //don wonder, ni style tu ya uandish.. soma string fomarting<br>
+    }<br><br>
+
+    public static int hcf(int n1, int n2)
+    {<br>
+        if (n2 != 0)<br>
+            return hcf(n2, n1 % n2);<br>
+        else<br>
+            return n1;<br>
+    }<br>
+}<br>
+	</code>
+</p>
+
+<p class="para"> I think majib yametosha, the time is short.</p>
+
+
+<div class="previous">
+    <a href="./l3.html"><< <span class="spn">Previous</span></a>
+</div>
+</div>
+</div>
+</body>
+</html>
